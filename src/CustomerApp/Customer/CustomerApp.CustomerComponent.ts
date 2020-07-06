@@ -1,7 +1,6 @@
 import { Component , Injector  } from '@angular/core';
 import {Customer} from "./CustomerApp.model"
 import {BaseLogger} from "../Utility/CustomerApp.Logger"
-import {HttpModule } from "@angular/http"
 import {HttpClient} from "@angular/common/http"
 @Component({
   templateUrl: './CustomerApp.CustomerView.html'
@@ -12,8 +11,7 @@ export  class CustomerComponent {
   CustomerModels :Array<Customer> = new Array<Customer>();
   Logobj : BaseLogger = null;
   Disable:boolean = false;
-  constructor(_injector:Injector, public http:HttpModule  
-    ,public httpc:HttpClient ){
+  constructor(_injector:Injector, public httpc:HttpClient ){
     this.Logobj = _injector.get("1");
     this.Logobj.Log();
   }
@@ -30,10 +28,10 @@ export  class CustomerComponent {
     res=>this.Error(res));
   }
   GetFromServer(){
+    
     this.httpc.get("http://localhost:3000/Customers").
     subscribe(res=>this.SuccessGet(res),res=>this.Error(res));
   }
-  // We need to create a response
   Error(res) {
     console.debug(res.json());
   }

@@ -5,8 +5,8 @@ import {BaseLogger} from "../Utility/CustomerApp.Logger"
   templateUrl: './CustomerApp.HomeView.html'
 })
 export  class HomeComponent {
-  Logobj : BaseLogger = null;// whithout BaseLogger we dont know where the object comes from
-  constructor(_logger : BaseLogger){ 
+  Logobj : BaseLogger = null;
+  constructor(_logger : BaseLogger){
     this.Logobj = _logger;
     this.Logobj.Log();
   }

@@ -3,7 +3,7 @@ import { Logs } from "selenium-webdriver";
 // browser console
 // email
 // db
-export interface ILogger{ // new logger
+export interface ILogger{
     Log();
 }
 export class BaseLogger implements ILogger{

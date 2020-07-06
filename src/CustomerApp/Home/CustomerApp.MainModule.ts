@@ -6,12 +6,10 @@ import { MasterPageComponent } from './CustomerApp.MasterPageComponent';
 import { HomeComponent } from './CustomerApp.HomeComponent';
 import { MainRoutes } from '../Routing/CustomerApp.MainRouting';
 import { DbLogger, BaseLogger, ConsoleLogger } from '../Utility/CustomerApp.Logger';
-import { HttpModule } from '@angular/http'
 
-var providerscoll:any = []; 
-// http call get this from the server (push the colleciton)
-// the client decides which object they want to inject
-providerscoll.push({ provide: "1", useClass: DbLogger }); // Tokens injections
+var providerscoll:any = [];
+// http call get this from the server
+providerscoll.push({ provide: "1", useClass: DbLogger });
 providerscoll.push({ provide: "2", useClass: ConsoleLogger });
 providerscoll.push({ provide: BaseLogger, useClass: ConsoleLogger });
 
@@ -22,9 +20,9 @@ providerscoll.push({ provide: BaseLogger, useClass: ConsoleLogger });
   ],
   imports: [
     RouterModule.forRoot(MainRoutes),
-    BrowserModule,FormsModule,HttpModule
+    BrowserModule,FormsModule
   ],
-  providers: [providerscoll] // conditions of providers 
+  providers: [providerscoll]
 ,
   bootstrap: [MasterPageComponent]
 })

@@ -123,3 +123,6 @@ SECTION 7 : Create user control by using input, output and event emitters:
 
    SECTION 9 :  Integration of MVC Visual studio with Angular
    1. ASP.NET
+
+   Section 10 : Migration Angular 6 to Angular 7
+    - Change some Modules : Http => HttpClient 
