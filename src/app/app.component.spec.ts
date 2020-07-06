@@ -1,8 +1,12 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-
+// What a user expects from system
+// Describe when your application 
+//'It' is running when instance can be created
 describe('AppComponent', () => {
+
   beforeEach(async(() => {
+    //initialization for every test case = it 
     TestBed.configureTestingModule({
       declarations: [
         AppComponent
@@ -14,6 +18,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
+    //NOT false,0," ", undefined, null, NaN
   });
 
   it(`should have as title 'CustomerApplication'`, () => {

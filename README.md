@@ -124,5 +124,15 @@ SECTION 7 : Create user control by using input, output and event emitters:
    SECTION 9 :  Integration of MVC Visual studio with Angular
    1. ASP.NET
 
-   Section 10 : Migration Angular 6 to Angular 7
+   SECTION  10 : Migration Angular 6 to Angular 7
     - Change some Modules : Http => HttpClient 
+
+
+    SECTION 11: Unit testing 
+      1. Black and White testing  : spec.ts = white test box 
+      2. Jasmine and Karma :
+        - Karma : is completely integrated (not test it now)
+      3. ng test : run all the test cases from spec.ts
+      4. Write test cases: 
+        - code in spec.ts = jasmin syntax
+      5. Write a test for the Add button
