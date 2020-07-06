@@ -13,6 +13,10 @@ export  class CustomerComponent {
     this.Logobj = _injector.get("1");
     this.Logobj.Log();
   }
+  SelectCustomer (_selected){
+    this.CustomerModel = _selected;
+
+  }
   Add(){
     this.CustomerModels.push(this.CustomerModel);
     this.CustomerModel = new Customer();// clear UI

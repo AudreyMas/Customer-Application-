@@ -92,4 +92,14 @@ SECTION 6 : Dependency Injection (DI) and Providers
   =>: Architecture = Providers and clients (consume the services). WIth class(= SERVICES) linked to tokens 
 
 
-
+SECTION 7 : Create user control by using input, output and event emitters:
+  - user control : reusable cmponenet 
+  - events = where the data will travel throught the output
+  1. Creation of user control: The intercation with the VIEW component through the input and output
+    - 3 layers : UI(grid html) - code behind componenet(gridComponent) - Model (customer + supplier)
+  2. Good practices with grid: 
+    - Setters (pass the data) and getters
+  3. Connection with GridComponenet and CustomerAppComponent = CustomerAppComponent HTML 
+    - [] = data comes from outside to the inside
+    - () = data comes from inside to the outside
+  4. Import the grid componenet to the customer Module
