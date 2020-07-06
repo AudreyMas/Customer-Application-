@@ -6,6 +6,7 @@ import { MasterPageComponent } from './CustomerApp.MasterPageComponent';
 import { HomeComponent } from './CustomerApp.HomeComponent';
 import { MainRoutes } from '../Routing/CustomerApp.MainRouting';
 import { DbLogger, BaseLogger, ConsoleLogger } from '../Utility/CustomerApp.Logger';
+import { HttpModule } from '@angular/http'
 
 var providerscoll:any = []; 
 // http call get this from the server (push the colleciton)
@@ -21,7 +22,7 @@ providerscoll.push({ provide: BaseLogger, useClass: ConsoleLogger });
   ],
   imports: [
     RouterModule.forRoot(MainRoutes),
-    BrowserModule,FormsModule
+    BrowserModule,FormsModule,HttpModule
   ],
   providers: [providerscoll] // conditions of providers 
 ,

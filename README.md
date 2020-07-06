@@ -103,3 +103,23 @@ SECTION 7 : Create user control by using input, output and event emitters:
     - [] = data comes from outside to the inside
     - () = data comes from inside to the outside
   4. Import the grid componenet to the customer Module
+
+  SECTION 8 : 
+  1. Install npm json server = a fake server for http calls (https://github.com/typicode/json-server)
+    - to start the json server : json-server --watch db.json
+
+    ==> the data => http://localhost:3000/customers
+
+  2. Create a call to the localhost:3000 to show the data
+    -JSON-SERVER : increment autmaticaly the data from the input.
+    - Json server don't send all the collection so => create a GET call 
+    - HTTPCLIENTMODULE
+  
+  3. Interceptors in HttpClient : help to inject pre processur object before call a POST or a GET
+   - The 'securitykey': 'key123' will be send whith a POST or a GET
+
+   4. The double data post 
+    - Add a Delay : json-server --watch --delay5000 db.json
+
+   SECTION 9 :  Integration of MVC Visual studio with Angular
+   1. ASP.NET
